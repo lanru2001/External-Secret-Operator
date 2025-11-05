@@ -119,7 +119,7 @@ spec:
           role: "external-secrets"
 ```
 
-## 2 ExternalSecret
+## 2. ExternalSecret
 
 This will create a Kubernetes Secret that PostgreSQL can consume:
 
