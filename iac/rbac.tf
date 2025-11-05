@@ -1,5 +1,4 @@
-# Setup RBAC to Service Accout External Secrets
-
+# Setup RBAC for External Secrets Service Account
 resource "kubernetes_cluster_role_binding" "role_tokenreview_binding" {
   metadata {
     name = "role-tokenreview-binding"
