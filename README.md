@@ -1,4 +1,19 @@
 ##  External Secret Operator for Kubernetes Secrets Management
+The External Secrets Operator (ESO) is a Kubernetes operator designed to integrate external secret management systems with Kubernetes. It allows you to store your sensitive information, such as API keys, database credentials, and other secrets, in a secure external secret store and then automatically inject those values into Kubernetes Secrets.
+
+## How it works:
+
+1. External Secret Store Integration: ESO supports various external secret providers like AWS Secrets Manager, HashiCorp Vault, Google Secrets Manager, Azure Key Vault, and more.
+
+2. SecretStore Resource: You define a SecretStore resource in Kubernetes, which tells ESO how to connect to your chosen external secret provider and authenticate with it.
+
+3. ExternalSecret Resource: You then define an ExternalSecret resource, which specifies: 
+- Which external secret to fetch from the configured SecretStore.
+- How the fetched data should be mapped to keys within the Kubernetes Secret.
+- The name and target namespace of the Kubernetes Secret to be created or updated.
+  
+4. Automatic Synchronization: ESO continuously monitors the ExternalSecret resources and the external secret store. When changes occur in the external secret, ESO automatically fetches the updated values and synchronizes them into the corresponding Kubernetes Secret. 
+
 
 ## Hashicorp vault cli commands 
 https://developer.hashicorp.com/vault/tutorials/get-started/learn-cli
