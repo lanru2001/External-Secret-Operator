@@ -1,5 +1,4 @@
 # S3 remote state
-
 terraform {
   backend "s3" {
     bucket         = "dlframe-tf-remote-dev-bkt"
