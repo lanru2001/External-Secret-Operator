@@ -1,4 +1,4 @@
-# External Secret Operator for Kubernetes Secrets Management
+##  External Secret Operator for Kubernetes Secrets Management
 
 # Hashicorp vault cli commands 
 https://developer.hashicorp.com/vault/tutorials/get-started/learn-cli
