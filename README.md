@@ -9,7 +9,7 @@ export VAULT_ADDR=http://127.0.0.1:8200
 vault login 
 ```
 
-## Create Secret Engines - use vault put command to add new secret path with keys/values
+## Create Secret Engines - use vault kv put command to add new secret path with keys/values
 ```bash
 vault kv put secret/app-postgres-secret username="postgresdev1" password="opensource2024" dbname="tododb"
 ```
@@ -21,7 +21,7 @@ vault kv get -format=json secret/app-postgres-secret | jq -r '.data.data.passwor
 vault kv get -format=json secret/app-postgres-secret | jq -r '.data.data.dbname'
 ```
 
-## Use kv patch to update a single key
+## Use vault kv patch to update a single key
 ```bash
 vault kv patch secret/app-postgres-secret password="OpenSource2025"
 ```
