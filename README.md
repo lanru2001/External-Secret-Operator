@@ -10,12 +10,13 @@ The External Secrets Operator (ESO) is a Kubernetes operator designed to integra
 3. SecretStore Resource
    - Define a SecretStore resource in Kubernetes, which tells ESO how to connect to your chosen external secret provider and authenticate with it.
 
-5. ExternalSecret Resource: Is an ExternalSecret resource, which specifies: 
+5. ExternalSecret Resource specifies: 
    - Which external secret to fetch from the configured SecretStore.
    - How the fetched data should be mapped to keys within the Kubernetes Secret.
    - The name and target namespace of the Kubernetes Secret to be created or updated.
   
-6. Automatic Synchronization: ESO continuously monitors the ExternalSecret resources and the external secret store. When changes occur in the external secret, ESO automatically fetches the updated values and synchronizes them into the corresponding Kubernetes Secret. 
+6. Automatic Synchronization:
+   - ESO continuously monitors the ExternalSecret resources and the external secret store. When changes occur in the external secret, ESO automatically fetches the updated values and synchronizes them into the corresponding Kubernetes Secret. 
 
 
 
