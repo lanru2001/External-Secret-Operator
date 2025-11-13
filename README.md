@@ -16,8 +16,8 @@ The External Secrets Operator (ESO) is a Kubernetes operator designed to integra
    - The name and target namespace of the Kubernetes Secret to be created or updated.
   
 6. Automatic Synchronization:
-   - ESO continuously monitors the ExternalSecret resources and the external secret store. When changes occur in the external secret, ESO automatically fetches the updated values and synchronizes them into the corresponding Kubernetes Secret. 
-
+   - ESO continuously monitors the ExternalSecret resources and the external secret store
+   - It automatically fetches the updated values and synchronizes them into the corresponding Kubernetes Secret. 
 
 
 ## Hashicorp vault cli commands 
@@ -57,13 +57,14 @@ path "secret/data/app-postgres-secret" {
    capabilities = ["create", "read", "update", "list"]
 }
 ```
+
 ## Create policy with the above access
 
 ```bash
 vault policy write read-write ./read-only.hcl
 ```
 
-## Enable kubernetes authentication to vault using vault CLI
+## Enable Kubernetes authentication to vault using vault cli
 
 ```bash
 vault auth enable -path test-cluster kubernetes
