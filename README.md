@@ -152,5 +152,13 @@ spec:
 
 Once applied, ESO will sync and create the Kubernetes Secret:
 ```bash
-kubectl get secret postgres-secret -n external-secrets -o yaml
+kubectl get secret test-secret -n external-secrets
+NAME          TYPE     DATA   AGE
+test-secret   Opaque   2      9d
+
+kubectl get secrets --namespace=external-secrets  test-secret -o jsonpath='{.data.POSTGRES_PASSWORD}' | base64 -d
+OpenSource2025
+
+kubectl get secrets --namespace=external-secrets  test-secret -o jsonpath='{.data.POSTGRES_USER}' | base64 -d
+postgresdev1
 ```
