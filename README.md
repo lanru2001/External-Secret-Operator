@@ -23,7 +23,7 @@ The External Secrets Operator (ESO) is a Kubernetes operator designed to integra
 ## Hashicorp vault cli commands 
 https://developer.hashicorp.com/vault/tutorials/get-started/learn-cli
 
-## login with your token
+## Login with your token
 
 ```bash
 export VAULT_ADDR=http://127.0.0.1:8200
