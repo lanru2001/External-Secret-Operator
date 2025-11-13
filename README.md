@@ -130,7 +130,7 @@ This will create a Kubernetes Secret that PostgreSQL can consume:
 apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
-  name: postgres-secret
+  name: test-secret
   namespace: external-secrets
 spec:
   refreshInterval: "1m"
@@ -138,8 +138,7 @@ spec:
     name: vault-backend
     kind: SecretStore
   target:
-    name: postgres-secret
-    creationPolicy: Owner
+    name: test-secret
   data:
     - secretKey: POSTGRES_USER
       remoteRef:
@@ -149,10 +148,6 @@ spec:
       remoteRef:
         key: app-postgres-secret
         property: password
-    - secretKey: POSTGRES_DB
-      remoteRef:
-        key: app-postgres-secret
-        property: dbname
 ```
 
 Once applied, ESO will sync and create the Kubernetes Secret:
