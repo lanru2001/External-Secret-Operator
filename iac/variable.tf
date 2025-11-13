@@ -7,5 +7,5 @@ variable "aws_region" {
 }
 
 variable "account_id" {
-    default = "060000000000"
+    default = "xxxxxxxxxx"
 }
