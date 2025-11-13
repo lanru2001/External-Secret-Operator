@@ -53,6 +53,7 @@ vault kv patch secret/app-postgres-secret password="OpenSource2025"
 ## Create policy for the secret path and grant 'create', 'read' , 'update', and ‘list’ permission
 
 ```bash
+# Save policy in read-only.hcl file
 path "secret/data/app-postgres-secret" {
    capabilities = ["create", "read", "update", "list"]
 }
