@@ -1,5 +1,4 @@
 ##  External Secret Operator for Kubernetes Secrets Management
-## https://external-secrets.io/latest/introduction/getting-started
 
 The External Secrets Operator (ESO) is a Kubernetes operator designed to integrate external secret management systems with Kubernetes. It allows sensitive information stored, such as API keys, database credentials, and other secrets, in a secure external secret store and then automatically inject those values into Kubernetes Secrets.
 
