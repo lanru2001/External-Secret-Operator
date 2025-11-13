@@ -53,7 +53,7 @@ vault kv patch secret/app-postgres-secret password="OpenSource2025"
 ## Create policy for the secret path and grant 'create', 'read' , 'update', and ‘list’ permission
 
 ```bash
-# Save policy in read-only.hcl file
+# Save policy in read-write.hcl file
 path "secret/data/app-postgres-secret" {
    capabilities = ["create", "read", "update", "list"]
 }
@@ -62,7 +62,7 @@ path "secret/data/app-postgres-secret" {
 ## Create policy with the above access
 
 ```bash
-vault policy write read-write ./read-only.hcl
+vault policy write read-write ./read-write.hcl
 ```
 
 ## Enable Kubernetes authentication to vault using vault cli
