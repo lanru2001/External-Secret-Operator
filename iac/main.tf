@@ -11,7 +11,7 @@ resource "helm_release" "external_secret_operator" {
   cleanup_on_fail  = true
   force_update     = true
   wait_for_jobs    = true
-  atomic          = true
+  atomic           = true
   timeout          = "600"
 
   # Reference your Helm values file
