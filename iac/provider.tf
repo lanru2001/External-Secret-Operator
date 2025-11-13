@@ -1,7 +1,7 @@
 # S3 remote state
 terraform {
   backend "s3" {
-    bucket         = "dlframe-tf-remote-dev-bkt"
+    bucket         = "tf-remote-dev-bkt"
     key            = "project/external-secrets"
     region         = "us-east-1"
   }
